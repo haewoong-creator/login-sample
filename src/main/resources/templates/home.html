@@ -7,5 +7,7 @@
 <body>
 	<div>Framework Home Page</div>
 	<div th:each="msg : ${cookieMessages}" th:text="${msg}"></div>
+	
+	<a th:href="@{/rest/logout}">로그아웃</a>
 </body>
 </html>

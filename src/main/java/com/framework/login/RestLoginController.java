@@ -48,5 +48,14 @@ public class RestLoginController {
 		
 		return result;
 	}
+	
+	@GetMapping("/logout")
+	public String logout(HttpSession session) {
+		log.info("로그아웃 요청");
+		session.invalidate(); // 현재 세션 정보를 비우는 메서드
+		return "redirect:/rest/login";
+		
+		
+	}
 
 }
